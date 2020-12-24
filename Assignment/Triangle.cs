@@ -11,7 +11,16 @@ namespace Assignment
     {
 
         Graphics g;
-      
+        /// <summary>
+        ///  This function is called from main form class and this function draws triangle 
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="outline"></param>
+        /// <param name="xaxis"></param>
+        /// <param name="yaxis"></param>
+        /// <param name="first_size"></param>
+        /// <param name="second_size"></param>
+        /// <param name="third_size"></param>
         public void Draw(Graphics g, Pen outline, int xaxis, int yaxis, int first_size, int second_size,int third_size)
         {
             g.DrawLine(outline, xaxis, yaxis, first_size, yaxis);
@@ -20,6 +29,18 @@ namespace Assignment
             g.DrawLine(outline, first_size, yaxis, xaxis, second_size);
             return;
         }
+
+        /// <summary>
+        ///  /// This function is called from main form class and this function fills triangle with 
+        /// color
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="color_fill"></param>
+        /// <param name="xaxis"></param>
+        /// <param name="yaxis"></param>
+        /// <param name="first_size"></param>
+        /// <param name="second_size"></param>
+        /// <param name="third_size"></param>
         public void fill(Graphics g, SolidBrush color_fill, int xaxis, int yaxis, int first_size, int second_size , int third_size)
         {
             Point point1 = new Point(xaxis, yaxis);
