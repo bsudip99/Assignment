@@ -72,9 +72,12 @@ namespace Assignment
             {
                 switch (shape)
                 {
-
                     case "circle":
-
+                        String Circlemessage = "All parameter must be given properly in such format: \"circle  x-axis y-axis radius";
+                        if (String.IsNullOrEmpty(xaxis.ToString()) || String.IsNullOrEmpty(yaxis.ToString()) || String.IsNullOrEmpty(first_size.ToString()))
+                        {
+                            MessageBox.Show(Circlemessage);
+                        }
                         g.DrawEllipse(outline, xaxis, yaxis, first_size, first_size);
                         g.FillEllipse(color_fill, xaxis, yaxis, first_size, first_size);
 
@@ -82,14 +85,23 @@ namespace Assignment
                         break;
 
                     case "square":
-
+                        String squaremessage = "All parameter must be given properly in such format: \"square  x-axis y-axis length";
+                        if (String.IsNullOrEmpty(xaxis.ToString()) || String.IsNullOrEmpty(yaxis.ToString()) || String.IsNullOrEmpty(first_size.ToString()))
+                        {
+                            MessageBox.Show(squaremessage);
+                        }
                         g.DrawRectangle(outline, xaxis, yaxis, first_size, first_size);
                         g.FillRectangle(color_fill, xaxis, yaxis, first_size, first_size);
 
                         break;
                     case "rectangle":
-
+                        
                         second_size = Int32.Parse(code_part[4]);
+                        String rectmessage = "All parameter must be given properly in such format: \"rectangle  x-axis y-axis length breadth";
+                        if (String.IsNullOrEmpty(xaxis.ToString()) || String.IsNullOrEmpty(yaxis.ToString()) || String.IsNullOrEmpty(first_size.ToString()))
+                        {
+                            MessageBox.Show(rectmessage);
+                        }
                         g.DrawRectangle(outline, xaxis, yaxis, first_size, second_size);
                         g.FillRectangle(color_fill, xaxis, yaxis, first_size, second_size);
                         break;
