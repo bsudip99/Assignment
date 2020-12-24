@@ -25,9 +25,24 @@ namespace Assignment
             g = pnl_draw.CreateGraphics();
             outline = new Pen(Color.Green);
             color_fill = new SolidBrush(Color.Yellow);
+            
         }
 
+        private void color_box_Click(object sender, EventArgs e)
+        {
+            colorselector.ShowDialog();
+            color_box.BackColor = colorselector.Color;
+            Color dialogcolor = colorselector.Color;
+            outline = new Pen(dialogcolor);
+        }
 
+        private void fill_color_Click(object sender, EventArgs e)
+        {
+            fillcolorselector.ShowDialog();
+            fill_color.BackColor = fillcolorselector.Color;
+            Color filldialogcolor = fillcolorselector.Color;
+            color_fill = new SolidBrush(filldialogcolor);
+        }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -39,7 +54,9 @@ namespace Assignment
                 "\n\n" + "|||||||||||||||||||" + "\n\n" +
                 " Rectangle x-axis y-axis length breadth " +
                 "\n\n \n\n " +
-                "Square x-axis y-axis length"
+                "Square x-axis y-axis length" +
+                 "\n\n \n\n " +
+                 "Triangle x-axis y-axis side1 side2 side3"
                 );
         }
 
@@ -89,6 +106,10 @@ namespace Assignment
 
         private void runcase()
         {
+            Color dialogcolor = colorselector.Color;
+            outline = new Pen(dialogcolor);
+            Color filldialogcolor = fillcolorselector.Color;
+            color_fill = new SolidBrush(filldialogcolor);
             String[] code_part = code.Split(' ');
             if (code_part.Length < 4)
             {
@@ -185,6 +206,10 @@ namespace Assignment
 
         private void movecase()
         {
+            Color dialogcolor = colorselector.Color;
+            outline = new Pen(dialogcolor);
+            Color filldialogcolor = fillcolorselector.Color;
+            color_fill = new SolidBrush(filldialogcolor);
             String[] code_part = code.Split(' ');
             if (code_part.Length != 2)
             {
@@ -199,6 +224,10 @@ namespace Assignment
         }
         private void drawcase()
         {
+            Color dialogcolor = colorselector.Color;
+            outline = new Pen(dialogcolor);
+            Color filldialogcolor = fillcolorselector.Color;
+            color_fill = new SolidBrush(filldialogcolor);
             String[] code_part = code.Split(' ');
             if (code_part.Length != 2)
             {

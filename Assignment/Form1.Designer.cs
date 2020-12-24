@@ -36,6 +36,10 @@
             this.execution_plan = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.color_box = new System.Windows.Forms.Button();
+            this.colorselector = new System.Windows.Forms.ColorDialog();
+            this.fill_color = new System.Windows.Forms.Button();
+            this.fillcolorselector = new System.Windows.Forms.ColorDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,11 +113,33 @@
             this.helpToolStripMenuItem.Text = "Help ";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
+            // color_box
+            // 
+            this.color_box.Location = new System.Drawing.Point(15, 298);
+            this.color_box.Name = "color_box";
+            this.color_box.Size = new System.Drawing.Size(75, 23);
+            this.color_box.TabIndex = 7;
+            this.color_box.Text = "Pen Color ";
+            this.color_box.UseVisualStyleBackColor = true;
+            this.color_box.Click += new System.EventHandler(this.color_box_Click);
+            // 
+            // fill_color
+            // 
+            this.fill_color.Location = new System.Drawing.Point(113, 298);
+            this.fill_color.Name = "fill_color";
+            this.fill_color.Size = new System.Drawing.Size(75, 23);
+            this.fill_color.TabIndex = 8;
+            this.fill_color.Text = "Fill Color ";
+            this.fill_color.UseVisualStyleBackColor = true;
+            this.fill_color.Click += new System.EventHandler(this.fill_color_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.fill_color);
+            this.Controls.Add(this.color_box);
             this.Controls.Add(this.execution_plan);
             this.Controls.Add(this.parameter_code);
             this.Controls.Add(this.label2);
@@ -141,6 +167,10 @@
         private System.Windows.Forms.TextBox execution_plan;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.Button color_box;
+        private System.Windows.Forms.ColorDialog colorselector;
+        private System.Windows.Forms.Button fill_color;
+        private System.Windows.Forms.ColorDialog fillcolorselector;
     }
 }
 
